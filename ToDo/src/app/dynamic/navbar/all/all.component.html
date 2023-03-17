@@ -1,0 +1,14 @@
+<div style="display:flex; flex-direction: column">
+  <form class="d-flex">
+    <input type="text" class="form-control" placeholder="add details" name="ip" [(ngModel)]="ipString">
+    <button type="button" (click)="addTask()">
+      Add
+    </button>
+  </form>
+  <div style="text-align: start;margin-left: 35.5%;margin-top: 15px">
+    <div id="taskStyler" style="zoom:1.50; text-align: start" *ngFor="let obj of getList()">
+      <input class="myCheckbox" id="check" type="checkbox" [(ngModel)]="obj.check">
+      <span [style.text-decoration]="obj.check?'line-through':'none'" id="taskStyle">{{ obj.name }}</span>
+    </div>
+  </div>
+</div>

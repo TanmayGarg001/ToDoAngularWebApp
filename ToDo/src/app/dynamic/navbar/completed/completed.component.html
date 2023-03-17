@@ -1,0 +1,12 @@
+<div style="text-align: start;margin-left: 35.5%;margin-top: 15px">
+  <div style="zoom:1.50" id="taskContainerComplete" *ngFor="let obj of getListCompleted()">
+    <div *ngIf="obj.check">
+      <input id="checkComplete" type="checkbox" [(ngModel)]="obj.check">
+      <span [style.text-decoration]="obj.check?'line-through':'none'" id="taskStyleComplete">{{ obj.name }}</span>
+      <i (click)="deleteItem(obj.id)" class="fa fa-trash-o" ></i>
+    </div>
+  </div>
+</div>
+<div id="deleteBtn">
+  <button (click)="deleteAll()"><i class="fa fa-trash-o pe-1"></i>delete all</button>
+</div>

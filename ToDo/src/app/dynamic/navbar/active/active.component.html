@@ -1,0 +1,14 @@
+<form class="d-flex">
+  <input type="text" class="form-control" placeholder="add details" name="ip" [(ngModel)]="ip">
+  <button type="button" (click)="addTaskActive()">
+    Add
+  </button>
+</form>
+<div style="text-align: start;margin-left: 35.5%;margin-top: 15px">
+  <div style="zoom:1.50" id="taskContainerActive" *ngFor="let obj of getListActive()">
+    <div *ngIf="!obj.check">
+      <input id="checkActive" type="checkbox" [(ngModel)]="obj.check">
+      <span [style.text-decoration]="obj.check?'line-through':'none'" id="taskStyleActive">{{ obj.name }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+#taskStyleComplete {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0;
+}
+
+#checkComplete {
+  margin-right: 0.5em;
+  width: 1em;
+}
+
+#taskContainerComplete {
+  width: 50em;
+  text-align: start;
+}
+
+i {
+  cursor: pointer;
+}
+
+#deleteBtn {
+  text-align: end;
+  width: 82em;
+}
+
+button {
+  width: 140px;
+  height: 45px;
+  border-radius: 4px;
+  background: #EB5757;
+  color: white;
+  border: none;
+}
